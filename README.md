@@ -173,4 +173,5 @@ Each one was debugged systematically:
 
 **Steps:**
 ```bash
+npm install
 npx expo export:web
