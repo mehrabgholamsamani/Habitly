@@ -1,0 +1,25 @@
+{
+  "expo": {
+    "name": "Habitly Tracker",
+    "slug": "habitly-tracker",
+    "scheme": "habitlytracker",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "userInterfaceStyle": "light",
+    "splash": {
+      "resizeMode": "contain",
+      "backgroundColor": "#8A7DFF"
+    },
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "ios": {
+      "supportsTablet": true
+    },
+    "android": {
+      "adaptiveIcon": {
+        "backgroundColor": "#8A7DFF"
+      }
+    }
+  }
+}
