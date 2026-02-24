@@ -4,36 +4,17 @@
     "slug": "habitly",
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./assets/icon.png",
     "userInterfaceStyle": "automatic",
-
     "platforms": ["ios", "android", "web"],
-
-    "splash": {
-      "image": "./assets/splash.png",
-      "resizeMode": "contain",
-      "backgroundColor": "#0B0F14"
-    },
-
     "assetBundlePatterns": ["**/*"],
-
     "web": {
       "bundler": "metro",
-      "output": "static",
-      "favicon": "./assets/favicon.png"
+      "output": "single"
     },
-
     "ios": {
       "supportsTablet": true
     },
-
-    "android": {
-      "adaptiveIcon": {
-        "foregroundImage": "./assets/adaptive-icon.png",
-        "backgroundColor": "#0B0F14"
-      }
-    },
-
+    "android": {},
     "extra": {
       "eas": {
         "projectId": "REPLACE_WITH_YOUR_EAS_PROJECT_ID"

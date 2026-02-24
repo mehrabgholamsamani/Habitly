@@ -7,7 +7,8 @@
     "start": "expo start",
     "android": "expo start --android",
     "ios": "expo start --ios",
-    "web": "expo start --web"
+    "web": "expo start --web",
+    "build": "expo export --platform web"
   },
   "dependencies": {
     "@expo-google-fonts/dm-serif-display": "^0.2.3",
