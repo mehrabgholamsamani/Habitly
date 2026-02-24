@@ -1,24 +1,42 @@
 {
   "expo": {
-    "name": "Habitly Tracker",
-    "slug": "habitly-tracker",
-    "scheme": "habitlytracker",
+    "name": "Habitly",
+    "slug": "habitly",
     "version": "1.0.0",
     "orientation": "portrait",
-    "userInterfaceStyle": "light",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "automatic",
+
+    "platforms": ["ios", "android", "web"],
+
     "splash": {
+      "image": "./assets/splash.png",
       "resizeMode": "contain",
-      "backgroundColor": "#8A7DFF"
+      "backgroundColor": "#0B0F14"
     },
-    "assetBundlePatterns": [
-      "**/*"
-    ],
+
+    "assetBundlePatterns": ["**/*"],
+
+    "web": {
+      "bundler": "metro",
+      "output": "static",
+      "favicon": "./assets/favicon.png"
+    },
+
     "ios": {
       "supportsTablet": true
     },
+
     "android": {
       "adaptiveIcon": {
-        "backgroundColor": "#8A7DFF"
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#0B0F14"
+      }
+    },
+
+    "extra": {
+      "eas": {
+        "projectId": "REPLACE_WITH_YOUR_EAS_PROJECT_ID"
       }
     }
   }
