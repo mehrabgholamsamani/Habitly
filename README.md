@@ -3,8 +3,9 @@
 Habitly is a calm-first meditation and focus app designed around **consistency, not guilt**.  
 It helps users build sustainable mindfulness habits with short, intentional sessions — across web and mobile — using a clean, emotionally-aware UI.
 
-> *Small practices. Real momentum.*
+## 🚀 Deployment
 
+### https://habitly-6nkk.vercel.app/
 ---
 
 ## ✨ Features at a Glance
