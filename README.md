@@ -177,3 +177,5 @@ Each one was debugged systematically:
 npm install
 
 npx expo export:web
+
+also guys check out my website [![Website](https://img.shields.io/badge/Website-000000?logo=googlechrome&logoColor=white)](https://mehrabdev.com)
