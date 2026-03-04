@@ -338,7 +338,7 @@ export async function setPrefs(p: UserPrefs) {
 }
 
 export async function resetAllData() {
-  const keys = [PROFILE_KEY, PREFS_KEY, CHALLENGES_KEY, BOOKMARKS_KEY, SESSIONS_KEY];
+  const keys = [K_PROFILE, PREFS_KEY, K_CHALLENGES, K_BOOKMARKS, K_SESSIONS];
   await AsyncStorage.multiRemove(keys);
   if (Platform.OS === "web") {
     try { await clearWebAvatar(); } catch {}
@@ -346,7 +346,10 @@ export async function resetAllData() {
 }
 
 export async function getProfile() {
-  const p = await getJson(K_PROFILE, { name: "User", avatarUri: "", avatarRef: "" });
+  const p = await getJson<{ name: string; avatarUri: string; avatarRef?: string | { kind: string; key: string } }>(
+    K_PROFILE,
+    { name: "User", avatarUri: "" }
+  );
   if (Platform.OS === "web" && typeof p.avatarUri === "string" && p.avatarUri.startsWith("blob:")) {
     const fixed = { ...p, avatarUri: "" };
     await setJson(K_PROFILE, fixed);

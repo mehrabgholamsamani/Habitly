@@ -55,7 +55,6 @@ function TabBar({ state, descriptors, navigation }: any) {
 
         const onLongPress = () => navigation.emit({ type: "tabLongPress", target: route.key });
 
-        const color = isFocused ? colors.primary : "rgba(20,40,40,0.45)";
         const Icon =
           route.name === "Home"
             ? HomeIcon
@@ -92,7 +91,7 @@ function TabBar({ state, descriptors, navigation }: any) {
                 borderColor: isFocused ? "rgba(201,168,76,0.30)" : "transparent",
               }}
             >
-              <Icon size={isCenter ? 26 : 24} color={color} />
+              <Icon size={isCenter ? 26 : 24} focused={isFocused} />
             </View>
             <View
               style={{
@@ -112,15 +111,12 @@ function TabBar({ state, descriptors, navigation }: any) {
 }
 
 export default function RootTabs() {
-  const { colors } = useTheme();
-
   return (
     <Tab.Navigator
       tabBar={(props) => <TabBar {...props} />}
       screenOptions={{
         headerShown: false,
         tabBarStyle: { backgroundColor: "transparent" },
-        sceneContainerStyle: { backgroundColor: colors.bg },
       }}
     >
       <Tab.Screen name="Home" component={HomeScreen} />

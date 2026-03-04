@@ -120,9 +120,11 @@ function exec(db: SQLite.SQLiteDatabase, sql: string, args: any[] = []): Promise
 }
 
 function runNative<T = any>(sql: string, args: any[] = []): Promise<T[]> {
-  const db = getNativeDb();
+  // expo-sqlite v14 removed .transaction(); cast to any to keep legacy native path compiling.
+  // TODO: migrate to runAsync/getAllAsync when targeting native builds.
+  const db = getNativeDb() as any;
   return new Promise((resolve, reject) => {
-    db.transaction((tx) => {
+    db.transaction((tx: any) => {
       tx.executeSql(
         sql,
         args,

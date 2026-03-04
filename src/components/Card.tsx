@@ -2,7 +2,7 @@ import React from "react";
 import { View, ViewStyle, Platform } from "react-native";
 import { useTheme } from "../theme/ThemeProvider";
 
-type Props = { children: React.ReactNode; style?: ViewStyle };
+type Props = { children: React.ReactNode; style?: ViewStyle; variant?: "default" | "hero" | "pill" };
 
 export const Card: React.FC<Props> = ({ children, style }) => {
   const { colors } = useTheme();

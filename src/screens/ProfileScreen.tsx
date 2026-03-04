@@ -50,7 +50,7 @@ export default function ProfileScreen({ navigation }: any) {
     const [p, pr, s, b] = await Promise.all([getProfile(), getPrefs(), listSessions(), listBookmarks()]);
     setName(p?.name || "User");
     setAvatarUri(p?.avatarUri || "");
-    if (Platform.OS === "web" && p?.avatarRef?.key) {
+    if (Platform.OS === "web" && typeof p?.avatarRef === "object" && p.avatarRef?.key) {
       const blob = await getWebAvatar();
       if (blob) {
         const url = URL.createObjectURL(blob);

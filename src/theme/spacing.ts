@@ -5,6 +5,8 @@ export const spacing = {
   lg: 20,
   xl: 24,
   xxl: 32,
+  radius: 12,
+  radiusLg: 20,
   // Bottom-tab sizing.
   // Layout goal:
   // - Distance from last component -> tab bar equals tab bar -> bottom edge.

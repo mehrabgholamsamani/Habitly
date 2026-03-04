@@ -15,7 +15,7 @@ export const HabitRow: React.FC<{
   return (
     <Pressable
       onPress={async () => {
-        await Haptics.selectionAsync();
+        try { await Haptics.selectionAsync(); } catch {}
         onToggle();
       }}
       onLongPress={onLongPress}

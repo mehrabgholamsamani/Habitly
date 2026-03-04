@@ -55,7 +55,7 @@ export default function WorkoutScreen() {
     if (!workout) return;
     const trimmed = name.trim();
     if (!trimmed) return;
-    await Haptics.selectionAsync();
+    try { await Haptics.selectionAsync(); } catch {}
     await Db.addWorkoutExercise(workout.id, trimmed);
     setExerciseName("");
     setOpenAdd(false);
@@ -63,7 +63,7 @@ export default function WorkoutScreen() {
   };
 
   const addSet = async (exerciseId: string) => {
-    await Haptics.selectionAsync();
+    try { await Haptics.selectionAsync(); } catch {}
     await Db.addSet(exerciseId, 8, 0);
     await load();
   };
