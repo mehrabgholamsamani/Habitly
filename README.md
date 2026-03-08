@@ -1,7 +1,7 @@
 # 🌿 Habitly — A Gentle Meditation & Focus App
 
 Habitly is a calm-first meditation and focus app designed around **consistency, not guilt**.  
-It helps users build sustainable mindfulness habits with short, intentional sessions — across web and mobile — using a clean, emotionally-aware UI.
+It helps users build sustainable mindfulness habits with short, intentional sessions, across web and mobile, using a clean, emotionally-aware UI.
 
 ## 🚀 Deployment
 
@@ -139,7 +139,7 @@ All user data lives in `AsyncStorage`.
 - Refactored custom TabBar exports (named vs default mismatch)
 
 **Lesson**
-> Navigation bugs aren’t visual problems — they’re architectural ones.
+> Navigation bugs aren’t visual problems , they’re architectural ones.
 
 ---
 
